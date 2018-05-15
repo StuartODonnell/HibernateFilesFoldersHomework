@@ -1,4 +1,4 @@
-package com.codeclan.example.db;
+package com.codeclan.folders.db;
 
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
@@ -15,7 +15,7 @@ public class DBHelper {
     private static Transaction transaction;
 
     public static void save(Object object) {
-        session = db.HibernateUtil.getSessionFactory().openSession();
+        session = HibernateUtil.getSessionFactory().openSession();
         try {
             transaction = session.beginTransaction();
             session.saveOrUpdate(object);
@@ -30,7 +30,7 @@ public class DBHelper {
 
     public static <T> List<T> getAll(Class classType) {
 
-        session = db.HibernateUtil.getSessionFactory().openSession();
+        session = HibernateUtil.getSessionFactory().openSession();
         List<T> results = null;
         try {
             Criteria cr = session.createCriteria(classType);
@@ -48,7 +48,7 @@ public class DBHelper {
     public static <T> T find(Class classType, int id)
 
     {
-        session = db.HibernateUtil.getSessionFactory().openSession();
+        session = HibernateUtil.getSessionFactory().openSession();
         T result = null;
         try {
             Criteria cr = session.createCriteria(classType);

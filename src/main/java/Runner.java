@@ -1,7 +1,7 @@
-import com.codeclan.example.db.DBFolder;
-import com.codeclan.example.db.DBHelper;
-import com.codeclan.example.models.File;
-import com.codeclan.example.models.Folder;
+import com.codeclan.folders.db.DBFolder;
+import com.codeclan.folders.db.DBHelper;
+import com.codeclan.folders.models.File;
+import com.codeclan.folders.models.Folder;
 
 import java.util.List;
 
@@ -33,4 +33,4 @@ public class Runner {
 
     }
 }
-}
+

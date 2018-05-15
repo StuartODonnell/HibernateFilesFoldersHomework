@@ -1,4 +1,4 @@
-package db;
+package com.codeclan.folders.db;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
