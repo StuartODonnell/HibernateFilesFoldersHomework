@@ -30,10 +30,11 @@ public class Runner {
         List<File> files = DBHelper.getAll(File.class);
         List<Folder> folders = DBHelper.getAll(Folder.class);
 
-        File foundFile = DBHelper.find(File.class, file2.getId());
+        File foundFile = DBHelper.find(File.class, file1.getId());
         Folder foundFolder = DBHelper.find(Folder.class, folder1.getId());
 
         List<File> leverArchFiles = DBFolder.getFilesForFolder(foundFolder);
+
 
     }
 }
