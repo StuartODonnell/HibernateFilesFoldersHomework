@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
+import java.awt.print.Book;
 import java.util.List;
 
 public class DBHelper {
@@ -63,4 +64,17 @@ public class DBHelper {
         return result;
 
     }
+
+//    public static void delete(Object object) {
+//        session = HibernateUtil.getSessionFactory().openSession();
+//        try {
+//            transaction = session.beginTransaction();
+//            session.delete(object);
+//            transaction.commit();
+//        } catch (HibernateException e){
+//            e.printStackTrace();
+//        } finally {
+//            session.close();
+//        }
+//    }
 }

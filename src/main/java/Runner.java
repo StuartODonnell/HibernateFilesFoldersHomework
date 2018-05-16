@@ -20,16 +20,20 @@ public class Runner {
         File file2 = new File("Carrot", ".txt", 50, folder1);
         DBHelper.save(file1);
 
-        File file3 = new File("Nobby", ".py", 500, folder2);
+        File file3 = new File("Fred Colon", ".wav", 1550, folder1);
+        DBHelper.save(file1);
+
+
+        File file4 = new File("Nobby", ".py", 500, folder2);
         DBHelper.save(file3);
 
         List<File> files = DBHelper.getAll(File.class);
         List<Folder> folders = DBHelper.getAll(Folder.class);
 
         File foundFile = DBHelper.find(File.class, file2.getId());
-        Folder foundFolder = DBHelper.findFolder.class, folder1.getId());
+        Folder foundFolder = DBHelper.find(Folder.class, folder1.getId());
 
-        List<File> leverArchFiles = DBFolder.getFIlesForFolder(foundFolder);
+        List<File> leverArchFiles = DBFolder.getFilesForFolder(foundFolder);
 
     }
 }
